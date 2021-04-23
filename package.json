@@ -4,12 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install:client": "npm install --prefix client",
-    "install:server": "npm install --prefix client",
     "start:client": "npm start --prefix client",
     "start:server": "nodemon index.js",
-    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
-    "install": "concurrently \"npm run install:client\" \"npm run install:server\""
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\""
   },
   "author": "",
   "license": "ISC",
