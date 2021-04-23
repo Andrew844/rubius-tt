@@ -24,3 +24,14 @@
 <code>
   npm run start
 </code>
+
+## P.S.
+В этом проекте я попробовал использовать новую структуру папок, обычно использую такую:
+<br/>
+pages
+<br/>
+components
+<br/>
+containers
+<br/>
+store
