@@ -1,0 +1,32 @@
+.form {
+  width: 430px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+
+  .formField {
+    width: 80%;
+    margin: 25px auto;
+    position: relative;
+
+    .error {
+      color: red;
+      font-size: 12px;
+      font-style: italic;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .actionBtns {
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px auto 0 auto;
+    width: 80%;
+
+    button {
+      margin-left: 10px;
+    }
+  }
+}
+
