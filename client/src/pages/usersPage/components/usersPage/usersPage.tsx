@@ -41,7 +41,7 @@ export const UsersPage = () => {
         ...user,
         organisation: organisations.data?.find(
           (org) => org.id === user.organisationId
-        ).shortName,
+        ).shortName
       }));
 
       setUsers(usersArr);
@@ -52,23 +52,23 @@ export const UsersPage = () => {
     organisations.data,
     organisations.loading,
     dispatch,
-    pageNumber,
+    pageNumber
   ]);
 
   const cols: TableColInterface[] = [
     { title: "ФИО", param: "fullName" },
     { title: "Организация", param: "org" },
-    { title: "email", param: "email" },
+    { title: "email", param: "email" }
   ];
 
   const onUserDelete = useCallback(
     (many: boolean, id?: number) => {
       const confirmString =
-        "Вы уверены, что хотите удалить " + many
+        `Вы уверены, что хотите удалить ${many
           ? `пользователей ${selectedRows
-              .map((row: UserInterface) => row.firstName)
-              .join(", ")}?`
-          : "этого пользователя?";
+            .map((row: UserInterface) => row.firstName)
+            .join(", ")}?`
+          : "этого пользователя?"}`;
 
       // eslint-disable-next-line no-restricted-globals
       const isDelete = confirm(confirmString);
@@ -104,14 +104,14 @@ export const UsersPage = () => {
       title: "Удалить",
       action: (id: number) => {
         onUserDelete(false, id);
-      },
+      }
     },
     {
       title: "Редактировать",
       action: (id: number) => {
         history.push(`/edit-user/${id}`);
-      },
-    },
+      }
+    }
   ];
 
   const nextPageClick = useCallback(() => {
