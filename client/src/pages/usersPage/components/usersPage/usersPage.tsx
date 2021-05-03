@@ -154,7 +154,7 @@ export const UsersPage = () => {
           </div>
         </div>
 
-        {usersData.data?.length === 0 ? (
+        {!usersData.data && (pageNumber === 1 || pageNumber === 0) ? (
           <p>
             Пока что вы не добавили ни одного пользователя. Хотите{" "}
             <Link to={"/add-user"}>добавить пользователя</Link>?
